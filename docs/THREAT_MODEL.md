@@ -1,0 +1,9 @@
+# MandateFence — Security boundaries
+
+- **Authority:** only the creator of a mandate can revoke it; only the named agent address can submit assessments. Global mandate/receipt IDs are single-use; callers need signed transactions. No superuser.
+- **Economic scope:** `budget` and `amount` are caller-supplied **bookkeeping units**, not token balances. A client must enforce currency, denomination and settlement independently. Zero-cost requests still consume an approval.
+- **Hard guards:** revoked mandates, exhausted approval caps and over-budget amounts never receive approval. An over-budget request is stored as a blocked receipt without LLM cost. Accounting updates only on an ALLOW consensus result.
+- **Semantic guard:** a human-authored mandate and agent proposal can be adversarial, ambiguous or contradictory. The LLM cannot guarantee truth; untrusted fields may attempt prompt injection. Validators independently rerun classification and compare normalized decisive classes, not unbounded explanation or loose confidence bands. Confidence below 80 always maps to UNCERTAIN. Consensus disagreement fails validation, with outcome determined by GenLayer execution rules.
+- **Replay/race:** receipts are immutable and IDs cannot be reused on this contract, but `is_approved` is **not** an atomic capability token and does not consume approval. An external executor must prevent reusing receipts, bind intended actions and outputs securely, and observe revocations. Do not use this standalone contract to protect real funds.
+- **Authenticity:** user-supplied text and addresses are not external identity attestation. No remote API, funds, GEN transfers or domain-level verification. `APPROVED` means this *description* met a specified mandate according to validator evaluation; not that an actual transaction is safe.
+- **Storage visibility:** mandates and receipt hashes are public. Do not include secrets in text.
