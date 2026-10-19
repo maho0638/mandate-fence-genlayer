@@ -29,3 +29,12 @@ python -m pytest tests/direct -q       # genuine GenLayer Direct Mode, mocked LL
 CI: `.github/workflows/ci.yml` (push / manual). Manual real-Studionet test: `.github/workflows/studionet.yml`. **Never confuse source compilation or offline tests with verified multi-validator Studionet consensus**. See `docs/PROOF_STATUS.md`, `docs/REVIEWER_GUIDE.md`, and `docs/THREAT_MODEL.md`.
 
 No claims of Portal acceptance, guaranteed points, real GEN spending, or deployed address until observed and documented.
+
+## Verified GitHub CI (19 October 2026)
+
+- 19/19 offline SDK-stub logic tests passed (not on-chain proof).
+- 22/22 GenLayer Direct Mode tests passed with validator re-execution mocks.
+- GenVM linter: 3/3 checks passed.
+- [GitHub Actions run](https://github.com/maho0638/mandate-fence-genlayer/actions/runs/39205923090).
+- Source SHA-256: `243bc2786fa04b665e169c9222d86d6f90b92af88fdc6261fc62679c739436b4`.
+- **No live Studionet run or Portal submission is claimed.**
