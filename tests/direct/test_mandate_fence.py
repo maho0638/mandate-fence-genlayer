@@ -7,7 +7,7 @@ import pytest
 def mk(direct_vm, direct_deploy, direct_alice, direct_bob):
     c = direct_deploy("contracts/mandate_fence.py")
     direct_vm.sender = direct_alice
-    c.create_mandate("m1", str(direct_bob), "Buy office supplies", "Buy paper, pens and notebooks", "No subscriptions or electronics", 100, 2)
+    c.create_mandate("m1", "0x" + direct_bob.hex(), "Buy office supplies", "Buy paper, pens and notebooks", "No subscriptions or electronics", 100, 2)
     direct_vm.sender = direct_bob
     return c
 
