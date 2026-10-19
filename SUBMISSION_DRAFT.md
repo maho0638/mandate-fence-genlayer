@@ -9,3 +9,12 @@
 **Evidence:** Add repository, passing Direct Mode CI, linter, real Studionet explorer contract address, full transaction hashes, and reviewer guide **only after independently verified**. See `docs/PROOF_STATUS.md`.
 
 **Known limits:** No automatic action execution, no token custody, no verifiable off-chain service identity; natural language evaluation may be mistaken despite validator consensus.
+
+## Verified evidence (19 October 2026)
+- Source: https://github.com/maho0638/mandate-fence-genlayer
+- Offline 19/19, Direct Mode 22/22, GenVM lint 3/3: https://github.com/maho0638/mandate-fence-genlayer/actions/runs/39205923090
+- Real Studionet 4-transaction lifecycle 1/1 passed: https://github.com/maho0638/mandate-fence-genlayer/actions/runs/39207914290
+- GenLayer Explorer contract: https://explorer-studio.genlayer.com/address/0x68096c6cf490F0Dc3768E630197BE1A9E101AB8E
+- Full transaction hashes and observed results: https://github.com/maho0638/mandate-fence-genlayer/blob/main/docs/PROOF_MANIFEST.json
+- Reproduction: https://github.com/maho0638/mandate-fence-genlayer/blob/main/docs/REVIEWER_GUIDE.md
+- Outcome: `ALLOW/APPROVED`. Registered an AI mandate, deterministically blocked an over-budget request, obtained a consensus-backed ALLOW/APPROVED decision, and revoked the mandate; readback checks passed.

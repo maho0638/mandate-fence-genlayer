@@ -37,4 +37,4 @@ No claims of Portal acceptance, guaranteed points, real GEN spending, or deploye
 - GenVM linter: 3/3 checks passed.
 - [GitHub Actions run](https://github.com/maho0638/mandate-fence-genlayer/actions/runs/39205923090).
 - Source SHA-256: `243bc2786fa04b665e169c9222d86d6f90b92af88fdc6261fc62679c739436b4`.
-- **No live Studionet run or Portal submission is claimed.**
+- **Live Studionet: 1/1 PASS**, 4 finalized tested calls, [network proof](https://github.com/maho0638/mandate-fence-genlayer/actions/runs/39207914290), contract `0x68096c6cf490F0Dc3768E630197BE1A9E101AB8E`. See [proof manifest](docs/PROOF_MANIFEST.json). **Portal not yet submitted.**
